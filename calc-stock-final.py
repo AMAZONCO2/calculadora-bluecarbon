@@ -5,10 +5,11 @@ import uuid
 import altair as alt
 from modules.calcular_reducao import calcula_estoque, resultados_completos
 
-conn = st.connection('postgresql', type="sql")
+
 
 # Carregar projetos salvos do banco de dados
 def load_projects():
+    conn = st.connection('postgresql', type="sql")
     df = conn.query('SELECT * FROM carbono.projetos', ttl="10m")
     project = pd.DataFrame(df)
     return project
