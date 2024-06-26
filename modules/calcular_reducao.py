@@ -1,4 +1,3 @@
-from statsmodels.tsa.holtwinters import ExponentialSmoothing
 import pandas as pd
 # Dados históricos da coluna "Taxa de Desmatamento Acumulativa por Ano (%)"
 data_acumulativa = {
@@ -10,8 +9,8 @@ data_acumulativa = {
 df_taxa_acumulativa = pd.DataFrame(data_acumulativa)
 
 # Aplicar suavização exponencial
-model = ExponentialSmoothing(df_taxa_acumulativa['Taxa de Desmatamento Acumulativa (%)'], trend='add', seasonal=None)
-fit = model.fit()
+#model = ExponentialSmoothing(df_taxa_acumulativa['Taxa de Desmatamento Acumulativa (%)'], trend='add', seasonal=None)
+#fit = model.fit()
 
 # Projetar para os próximos 30 anos
 projection_years = list(range(2026, 2056 + 1))
