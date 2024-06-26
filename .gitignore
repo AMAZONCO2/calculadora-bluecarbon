@@ -55,9 +55,6 @@ cover/
 *.mo
 *.pot
 
-#streamlit
-.streamlit
-
 # Django stuff:
 *.log
 local_settings.py
